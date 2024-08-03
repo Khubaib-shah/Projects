@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   console.log(localStorage.getItem("user"));
   if (!localStorage.getItem("user")) {
-    window.location.replace("../pages/login.html");
+    window.location.replace("./pages/login.html");
   }
 });
 

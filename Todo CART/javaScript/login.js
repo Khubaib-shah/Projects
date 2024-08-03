@@ -18,7 +18,6 @@ import {
   ref,
   getDatabase,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCNaqEsns-F6hyNiJHdSx2w-hmil_uqJ8s",
   authDomain: "realtime-database-f0288.firebaseapp.com",
@@ -36,7 +35,7 @@ const database = getDatabase(app);
 const auth = getAuth();
 const loginBTN = document.querySelector("#loginBTN");
 loginBTN.addEventListener("click", async (event) => {
-  event.preventDefault(); // Prevent the default form submission
+  event.preventDefault(); 
 
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
@@ -49,18 +48,16 @@ loginBTN.addEventListener("click", async (event) => {
       password
     );
     const user = userCredential.user;
+    console.log(user)
 
-    // Create a new Date object for the last login timestamp
     const dt = new Date();
 
-    // Update the user's last login time in Firebase
     await set(ref(database, "user/" + user.uid), {
       email: email,
       last_login: dt.toISOString(),
     });
 
     localStorage.setItem("user", user.uid);
-    // Notify user and redirect
     alert("Login successful!");
     window.location.href = "../index.html";
   } catch (error) {
