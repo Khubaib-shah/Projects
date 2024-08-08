@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:wght@400;500;600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1 id="title">Sign up</h1>
+        <form>
+          <div class="input-group">
+            <div class="input_Field" id="nameField">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="name" placeholder="Name" />
+            </div>
+            <div class="input_Field">
+              <i class="fa-solid fa-envelope"></i>
+              <input
+                type="text"
+                id="email"
+                placeholder="Email"
+                autocomplete="username"
+              />
+            </div>
+            <div class="input_Field">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                autocomplete="current-password"
+              />
+            </div>
+            <p>Lost password <a href="#">Click Here!</a></p>
+          </div>
+        </form>
+        <div class="btn_field">
+          <button type="button" id="signupBTN">Sign up</button>
+          <button type="button" id="signinBTN" class="disable">Sign in</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="app.js"></script>
+  <script
+    src="https://kit.fontawesome.com/79b181b7f9.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
